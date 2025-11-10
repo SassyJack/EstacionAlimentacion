@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Data Warehouse Project{% endblock %}
+
+{% block content %}
+<section class="py-5 bg-light border-bottom">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <h1 class="display-4 fw-bold">Estación Inteligente de Alimentación</h1>
+                <p class="lead">
+                    Plataforma de análisis que centraliza la información de estaciones IoT para garantizar el bienestar de las mascotas
+                    en Chía, Cundinamarca, alineada con los Objetivos de Desarrollo Sostenible.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a class="btn btn-primary btn-lg" href="{{ url_for('pages.project_overview') }}">
+                        Conoce el proyecto
+                    </a>
+                    <a class="btn btn-outline-primary btn-lg" href="{{ url_for('pages.power_bi') }}">
+                        Plan de integración Power BI
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <img src="{{ url_for('static', filename='images/hero-station.svg') }}" class="img-fluid" alt="Ilustración estación inteligente" onerror="this.style.display='none';">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-geo-alt text-primary me-2"></i> Problemática urbana
+                        </h5>
+                        <p class="card-text text-body-secondary">
+                            Identifica cómo las estaciones inteligentes responden a los desafíos de alimentación responsable en entornos urbanos.
+                        </p>
+                        <a href="{{ url_for('pages.project_overview') }}#problema" class="btn btn-link px-0">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-database-add text-primary me-2"></i> Big Data
+                        </h5>
+                        <p class="card-text text-body-secondary">
+                            Analiza cómo se gestionan millones de lecturas IoT para producir decisiones basadas en evidencia.
+                        </p>
+                        <a href="{{ url_for('pages.project_overview') }}#big-data" class="btn btn-link px-0">Explorar análisis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-graph-up text-primary me-2"></i> Dashboards
+                        </h5>
+                        <p class="card-text text-body-secondary">
+                            Accede a tableros interactivos y monitorea el rendimiento de cada estación en tiempo real.
+                        </p>
+                        <a href="{{ url_for('dashboards.list_dashboards') }}" class="btn btn-primary">Ver dashboards</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-journal-bookmark text-primary me-2"></i> Metodología
+                        </h5>
+                        <p class="card-text text-body-secondary">
+                            Recorre cada fase del proyecto, desde la simulación de datos hasta la implementación del data warehouse.
+                        </p>
+                        <a href="{{ url_for('methodology.methodology_index') }}" class="btn btn-primary">Ver metodología</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

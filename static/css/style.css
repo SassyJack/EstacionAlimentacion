@@ -1,0 +1,263 @@
+/* Estilos globales con paleta café oscuro y beige */
+
+:root {
+    --coffee-dark: #5a3d32;
+    --coffee: #7b5647;
+    --coffee-light: #a97c68;
+    --beige: #f5f0e6;
+    --bone: #fdf8f0;
+    --accent: #d7b899;
+    --accent-strong: #b07f51;
+    --text-primary: #2d1f1c;
+    --text-secondary: #5c4b43;
+    --shadow-soft: 0 10px 30px rgba(62, 39, 35, 0.15);
+    --shadow-hover: 0 18px 40px rgba(62, 39, 35, 0.22);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    color: var(--text-primary);
+    background: linear-gradient(180deg, var(--bone) 0%, var(--beige) 100%);
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: var(--accent-strong);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--coffee);
+}
+
+.btn-primary {
+    background: var(--coffee-dark);
+    border-color: var(--coffee-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--accent-strong);
+    border-color: var(--accent-strong);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-outline-primary {
+    color: var(--coffee-dark);
+    border-color: var(--coffee-dark);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    color: #fff;
+    background: var(--coffee-dark);
+    border-color: var(--coffee-dark);
+}
+
+.navbar {
+    background: rgba(90, 61, 50, 0.92) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-soft);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.15);
+}
+
+.navbar.scrolled {
+    background: rgba(90, 61, 50, 0.88) !important;
+    box-shadow: 0 12px 35px rgba(90, 61, 50, 0.25);
+    transform: translateY(-4px);
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82) !important;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.75) 50%, transparent 100%);
+    opacity: 0;
+    transform: scaleX(0.5);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.active::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.nav-scroller {
+    position: relative;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.nav-scroller::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    /* Aumentamos la opacidad del relleno a 0.9 para más visibilidad */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='rgba(255,255,255,0.9)'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2.5 14.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm-5-6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 25px 15px; /* Hacemos las huellas más grandes */
+    animation: navScroll 4s linear infinite;
+}
+
+@keyframes navScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Movemos la mitad del ancho para un bucle perfecto */
+    }
+}
+
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: none;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--shadow-soft);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--coffee-dark);
+}
+
+.card-text {
+    color: var(--text-secondary);
+}
+
+.badge {
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.bg-primary-subtle {
+    background: rgba(93, 64, 55, 0.1) !important;
+}
+
+.text-primary {
+    color: var(--coffee-dark) !important;
+}
+
+.bg-dark {
+    background: var(--coffee-dark) !important;
+    transition: background 0.3s ease;
+}
+
+.bg-primary {
+    background: var(--coffee) !important;
+}
+
+.bg-light {
+    background: var(--beige) !important;
+}
+
+.border-top {
+    border-top: 1px solid rgba(93, 64, 55, 0.12) !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(93, 64, 55, 0.12) !important;
+}
+
+.shadow,
+.shadow-sm,
+.shadow-lg {
+    box-shadow: var(--shadow-soft) !important;
+}
+
+.rounded {
+    border-radius: 16px !important;
+}
+
+.ratio {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.powerbi-container {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    border: 1px solid rgba(93, 64, 55, 0.18);
+}
+
+.alert-info {
+    background: rgba(215, 184, 153, 0.22);
+    border: none;
+    color: var(--coffee-dark);
+    box-shadow: inset 0 0 0 1px rgba(93, 64, 55, 0.18);
+}
+
+.methodology-content {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+footer {
+    background: var(--coffee-dark);
+    color: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 -10px 30px rgba(62, 39, 35, 0.2);
+}
+
+.navbar-logo {
+    height: 40px; /* Ajusta la altura según sea necesario */
+    width: auto;
+}

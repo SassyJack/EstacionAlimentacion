@@ -1,0 +1,11 @@
+# Configuración de la aplicación Flask
+# Copia este archivo como .env y configura los valores
+
+SECRET_KEY=your-secret-key-here-change-this-in-production
+DEBUG=False
+PORT=5000
+
+# Configuración de base de datos (si se necesita)
+# DATABASE_URL=sqlite:///app.db
+# DATABASE_URL=postgresql://user:password@localhost/dbname
+

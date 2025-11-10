@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}Proyecto - Estación de Alimentación{% endblock %}
+
+{% block content %}
+<section class="py-5 bg-light border-bottom">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold mb-3">Estación Inteligente de Alimentación para Animales Domésticos</h1>
+                <p class="lead">
+                    Conoce el proyecto completo: desde la problemática urbana identificada en Chía, Cundinamarca,
+                    hasta la arquitectura analítica que permite monitorear y optimizar el suministro de alimento.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-primary" href="#problema">ODS y problemática</a>
+                    <a class="btn btn-outline-primary" href="#big-data">Big Data</a>
+                    <a class="btn btn-outline-primary" href="#analitica">Conclusiones</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="{{ url_for('static', filename='images/project-overview.svg') }}" class="img-fluid" alt="Ilustración del proyecto" onerror="this.style.display='none';">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        {% for section in sections %}
+        <article id="{{ section.id }}" class="mb-5">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <div class="badge bg-primary-subtle text-primary fs-6 px-3 py-2 mb-3 text-uppercase">
+                        {{ loop.index }}. {{ section.title }}
+                    </div>
+                    <p class="fs-5">{{ section.excerpt }}</p>
+                </div>
+                <div class="col-md-7">
+                    {% for block in section.body %}
+                    <div class="mb-4">
+                        <h3 class="h5 fw-semibold">{{ block.heading }}</h3>
+                        <div class="text-body-secondary">
+                            {{ block.content|linebreaks }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% if not loop.last %}
+            <hr class="my-5">
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="py-5 bg-light border-top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="fw-bold mb-3">Prepárate para el tablero de Power BI</h2>
+                <p class="mb-4">
+                    El siguiente paso es conectar el data warehouse al ecosistema de visualización. Visita la sección dedicada
+                    a Power BI para entender cómo se realizará la integración y qué métricas se presentarán.
+                </p>
+                <a class="btn btn-success" href="{{ url_for('pages.power_bi') }}">Ver plan de integración con Power BI</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
