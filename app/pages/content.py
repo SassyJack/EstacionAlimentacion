@@ -22,9 +22,9 @@ project_sections = [
             {
                 "heading": "ODS relacionados",
                 "content": (
-                    "* **ODS 11** — Ciudades y comunidades sostenibles.\n"
-                    "* **ODS 12** — Producción y consumo responsables.\n"
-                    "* **ODS 15** — Vida de ecosistemas terrestres."
+                    " ODS 11 — Ciudades y comunidades sostenibles.\n"
+                    " ODS 12 — Producción y consumo responsables.\n"
+                    " ODS 15 — Vida de ecosistemas terrestres."
                 ),
             },
         ],
@@ -40,9 +40,9 @@ project_sections = [
             {
                 "heading": "Beneficios clave",
                 "content": (
-                    "* Identificación de patrones por zona y franja horaria.\n"
-                    "* Detección de anomalías como sobrealimentación o inactividad.\n"
-                    "* Predicción de recargas y optimización de recursos."
+                    " Identificación de patrones por zona y franja horaria.\n"
+                    " Detección de anomalías como sobrealimentación o inactividad.\n"
+                    " Predicción de recargas y optimización de recursos."
                 ),
             }
         ],
@@ -58,10 +58,10 @@ project_sections = [
             {
                 "heading": "Variables recopiladas",
                 "content": (
-                    "* Identificador y ubicación de la estación.\n"
-                    "* Fecha y hora de lectura.\n"
-                    "* Cantidad de alimento dispensado.\n"
-                    "* Temperatura ambiental, presencia detectada y nivel de energía."
+                    " Identificador y ubicación de la estación.\n"
+                    " Fecha y hora de lectura.\n"
+                    " Cantidad de alimento dispensado.\n"
+                    " Temperatura ambiental, presencia detectada y nivel de energía."
                 ),
             },
             {
@@ -84,9 +84,9 @@ project_sections = [
             {
                 "heading": "Flujo ETL",
                 "content": (
-                    "* **Extracción:** lectura de datos crudos de sensores.\n"
-                    "* **Transformación:** limpieza, normalización y control de valores atípicos.\n"
-                    "* **Carga:** inserción en un data warehouse optimizado para consultas."
+                    " Extracción: lectura de datos crudos de sensores.\n"
+                    " Transformación: limpieza, normalización y control de valores atípicos.\n"
+                    " Carga: inserción en un data warehouse optimizado para consultas."
                 ),
             }
         ],
@@ -102,9 +102,9 @@ project_sections = [
             {
                 "heading": "Técnicas aplicadas",
                 "content": (
-                    "* Modelos predictivos para anticipar recargas.\n"
-                    "* Análisis de correlación entre temperatura y consumo.\n"
-                    "* Monitoreo continuo de indicadores clave."
+                    " Modelos predictivos para anticipar recargas.\n"
+                    " Análisis de correlación entre temperatura y consumo.\n"
+                    " Monitoreo continuo de indicadores clave."
                 ),
             },
             {
@@ -126,23 +126,6 @@ power_bi_features = {
         "El data warehouse de SQL Server se conecta con Power BI para construir dashboards "
         "dinámicos que permitan monitorear las estaciones inteligentes y tomar decisiones "
         "en tiempo real."
-    ),
-    "capabilities": [
-        "Conectividad directa al data warehouse con actualizaciones programadas.",
-        "Dashboards interactivos para consumo de alimento, eficiencia energética y alertas.",
-        "Distribución segura de reportes web y móviles para los responsables del proyecto.",
-    ],
-    "next_steps": [
-        "Configurar las credenciales de acceso al data warehouse en el servicio de Power BI.",
-        "Generar un reporte con gráficos de tendencias, mapas de estaciones y tarjetas KPI.",
-        "Obtener el `embed_url` y `report_id` para integrarlos en la vista de tableros.",
-    ],
-    "placeholder": {
-        "heading": "Espacio reservado para el tablero",
-        "description": (
-            "Cuando se genere el reporte en Power BI, incrusta aquí el iframe o utiliza el SDK "
-            "de Microsoft para una integración autenticada."
-        ),
-    },
+    )
 }
 

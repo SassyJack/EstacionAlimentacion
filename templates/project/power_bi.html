@@ -5,76 +5,17 @@
 {% block content %}
 <section class="py-5 bg-dark text-light">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h1 class="display-5 fw-bold mb-3">{{ info.title }}</h1>
-                <p class="lead mb-4">{{ info.summary }}</p>
-                <a class="btn btn-outline-light btn-lg" href="{{ url_for('pages.project_overview') }}">Volver al resumen del proyecto</a>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 text-center">
+                <h2 class="h3 fw-bold mb-3">{{ info.title }}</h2>
+                <p class="mb-4">{{ info.summary }}</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body p-4">
-                        <h2 class="h4 fw-semibold mb-3">Capacidades previstas</h2>
-                        <ul class="list-unstyled mb-0">
-                            {% for capability in info.capabilities %}
-                            <li class="d-flex mb-3">
-                                <span class="badge bg-success-subtle text-success me-3 mt-1">
-                                    <i class="bi bi-check2-circle"></i>
-                                </span>
-                                <span>{{ capability }}</span>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body p-4">
-                        <h2 class="h4 fw-semibold mb-3">Siguientes pasos</h2>
-                        <ol class="mb-0 ps-3">
-                            {% for step in info.next_steps %}
-                            <li class="mb-3">{{ step }}</li>
-                            {% endfor %}
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="py-5 bg-light border-top">
-    <div class="container">
-        <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-                <h2 class="h3 fw-bold mb-3">{{ info.placeholder.heading }}</h2>
-                <p class="mb-4">{{ info.placeholder.description }}</p>
-                <div class="alert alert-info d-flex align-items-center" role="alert">
-                    <i class="bi bi-info-circle-fill fs-4 me-3"></i>
-                    <div>
-                        Sustituye este recuadro con el iframe de Power BI o implementa autenticación
-                        segura mediante Azure AD y el SDK de JavaScript.
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="ratio ratio-16x9 bg-secondary-subtle border rounded d-flex align-items-center justify-content-center text-secondary">
-                    <div class="text-center px-4">
-                        <i class="bi bi-bar-chart-line fs-1 mb-3"></i>
-                        <p class="mb-0">Aquí se embebe el tablero interactivo cuando esté listo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
 {% endblock %}
 

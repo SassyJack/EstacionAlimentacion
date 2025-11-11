@@ -29,7 +29,7 @@ _STEPS: List[MethodologyStep] = [
             "las etapas posteriores."
         ),
         order=1,
-        image="images/methodology/discovery.jpg",
+        image="images/methodology/Descubrimiento.png",
     ),
     MethodologyStep(
         id=2,
@@ -46,7 +46,7 @@ _STEPS: List[MethodologyStep] = [
             "actualización de la información."
         ),
         order=2,
-        image="images/methodology/modeling.jpg",
+        image="images/methodology/Modelado.png",
     ),
     MethodologyStep(
         id=3,
@@ -64,7 +64,7 @@ _STEPS: List[MethodologyStep] = [
             "la adopción."
         ),
         order=3,
-        image="images/methodology/implementation.jpg",
+        image="images/methodology/Implementación.png",
     ),
 ]
 
