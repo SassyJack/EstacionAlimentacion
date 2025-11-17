@@ -3,8 +3,6 @@ from pathlib import Path
 
 from flask import Flask, render_template
 
-from .dashboards import dashboards_bp
-from .methodology import methodology_bp
 from .filters import register_filters
 from .pages import pages_bp
 
@@ -23,8 +21,6 @@ def create_app():
     register_filters(app)
 
     app.register_blueprint(pages_bp)
-    app.register_blueprint(dashboards_bp)
-    app.register_blueprint(methodology_bp)
 
     @app.route("/")
     def index():

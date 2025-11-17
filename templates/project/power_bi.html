@@ -14,8 +14,24 @@
     </div>
 </section>
 
-
-
-
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            {% for d in dashboards %}
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-bar-chart-line text-primary me-2"></i> {{ d.title }}
+                        </h5>
+                        <p class="card-text text-body-secondary">{{ d.description | truncate_words(28) }}</p>
+                        <a href="{{ url_for('pages.power_bi_detail', slug=d.slug) }}" class="btn btn-primary">Abrir dashboard</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {% endblock %}
 

@@ -129,3 +129,28 @@ power_bi_features = {
     )
 }
 
+
+power_bi_dashboards = [
+    {
+        "slug": "resumen",
+        "title": "Resumen",
+        "description": "Vista ejecutiva con indicadores clave del proyecto.",
+        "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMmJmZDZkMTMtNDk3OC00MTQ2LWIzZmYtYTk4ZDRhNjEzYmU2IiwidCI6IjA3ZGE2N2EwLTFmNDMtNGU4Yy05NzdmLTVmODhiNjQ3MGVlNiIsImMiOjR9&pageName=2bdb54f04503e6020583",
+        "updated_at": "2024-06-15",
+    },
+    {
+        "slug": "analisis-detallado",
+        "title": "Analisis Detallado",
+        "description": "Exploración profunda de variables y relaciones entre métricas.",
+        "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMmJmZDZkMTMtNDk3OC00MTQ2LWIzZmYtYTk4ZDRhNjEzYmU2IiwidCI6IjA3ZGE2N2EwLTFmNDMtNGU4Yy05NzdmLTVmODhiNjQ3MGVlNiIsImMiOjR9&pageName=ee27e0e0c66148670208",
+        "updated_at": "2024-07-03",
+    },
+    {
+        "slug": "tendencias",
+        "title": "Tendencias",
+        "description": "Evolución temporal y patrones detectados en el comportamiento.",
+        "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMmJmZDZkMTMtNDk3OC00MTQ2LWIzZmYtYTk4ZDRhNjEzYmU2IiwidCI6IjA3ZGE2N2EwLTFmNDMtNGU4Yy05NzdmLTVmODhiNjQ3MGVlNiIsImMiOjR9&pageName=7d1dd8ebd440dc906d37",
+        "updated_at": "2024-08-10",
+    },
+]
+
