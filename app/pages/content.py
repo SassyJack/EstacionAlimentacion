@@ -5,18 +5,18 @@ project_sections = [
         "id": "problema",
         "title": "Definición del problema y ODS asociados",
         "excerpt": (
-            "En Chía, Cundinamarca, muchas familias no pueden garantizar una "
+            "En ciudades inteligentes, muchas familias no pueden garantizar una "
             "alimentación equilibrada y puntual para sus mascotas. Las estaciones "
             "inteligentes distribuidas permiten automatizar la dispensación de alimento "
             "y monitorear el consumo en tiempo real."
         ),
         "body": [
             {
-                "heading": "Contexto urbano",
+                "heading": "Contexto de ciudades inteligentes",
                 "content": (
-                    "La propuesta contempla 10 estaciones distribuidas estratégicamente y "
-                    "conectadas mediante IoT para garantizar un control sostenible del "
-                    "alimento dispensado."
+                    "La propuesta contempla 10 estaciones distribuidas estratégicamente en puntos "
+                    "clave de ciudades inteligentes, conectadas mediante IoT para garantizar un "
+                    "control sostenible del alimento dispensado y mejorar la calidad de vida urbana."
                 ),
             },
             {
@@ -52,7 +52,7 @@ project_sections = [
         "title": "Dataset y simulación de sensores",
         "excerpt": (
             "Se generó un dataset simulado de hasta 8 millones de registros con datos de "
-            "sensores IoT y cámaras en las 10 estaciones de Chía."
+            "sensores IoT y cámaras en las 10 estaciones distribuidas en ciudades inteligentes."
         ),
         "body": [
             {
@@ -124,8 +124,8 @@ power_bi_features = {
     "title": "Integración con Power BI",
     "summary": (
         "El data warehouse de SQL Server se conecta con Power BI para construir dashboards "
-        "dinámicos que permitan monitorear las estaciones inteligentes y tomar decisiones "
-        "en tiempo real."
+        "dinámicos que permitan monitorear las estaciones inteligentes en ciudades inteligentes "
+        "y tomar decisiones en tiempo real."
     )
 }
 
@@ -153,4 +153,3 @@ power_bi_dashboards = [
         "updated_at": "2024-08-10",
     },
 ]
-

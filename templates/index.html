@@ -9,8 +9,8 @@
             <div class="col-lg-7">
                 <h1 class="display-4 fw-bold">Estación Inteligente de Alimentación</h1>
                 <p class="lead">
-                    Plataforma de análisis que centraliza la información de estaciones IoT para garantizar el bienestar de las mascotas
-                    en Chía, Cundinamarca, alineada con los Objetivos de Desarrollo Sostenible.
+                    Plataforma de análisis que centraliza la información de estaciones IoT para ciudades inteligentes, 
+                    garantizando el bienestar de las mascotas y alineándose con los Objetivos de Desarrollo Sostenible.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
                     <a class="btn btn-primary btn-lg" href="{{ url_for('pages.project_overview') }}">
@@ -32,28 +32,36 @@
     <div class="container">
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="bi bi-geo-alt text-primary me-2"></i> Problemática urbana
-                        </h5>
-                        <p class="card-text text-body-secondary">
-                            Identifica cómo las estaciones inteligentes responden a los desafíos de alimentación responsable en entornos urbanos.
+                <div class="feature-card h-100">
+                    <div class="feature-card-header">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="feature-card-body">
+                        <h5 class="feature-card-title">Problemática urbana</h5>
+                        <p class="feature-card-text">
+                            Identifica cómo las estaciones inteligentes responden a los desafíos de alimentación responsable en ciudades inteligentes.
                         </p>
-                        <a href="{{ url_for('pages.project_overview') }}#problema" class="btn btn-link px-0">Ver detalles</a>
+                        <a href="{{ url_for('pages.project_overview') }}#problema" class="feature-card-link">
+                            Ver detalles
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <i class="bi bi-database-add text-primary me-2"></i> Big Data
-                        </h5>
-                        <p class="card-text text-body-secondary">
+                <div class="feature-card h-100">
+                    <div class="feature-card-header">
+                        <i class="bi bi-database-add"></i>
+                    </div>
+                    <div class="feature-card-body">
+                        <h5 class="feature-card-title">Big Data</h5>
+                        <p class="feature-card-text">
                             Analiza cómo se gestionan millones de lecturas IoT para producir decisiones basadas en evidencia.
                         </p>
-                        <a href="{{ url_for('pages.project_overview') }}#big-data" class="btn btn-link px-0">Explorar análisis</a>
+                        <a href="{{ url_for('pages.project_overview') }}#big-data" class="feature-card-link">
+                            Explorar análisis
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
